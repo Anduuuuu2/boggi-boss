@@ -1,0 +1,4 @@
+# Referencias de terceros: nunca versionar.
+*
+!.gitignore
+!README.md

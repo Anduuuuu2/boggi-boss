@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">Milo, investigación: gota inclinada con binoculares colgados</title>
+  <defs>
+    <linearGradient id="miloFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE698"/>
+      <stop offset="1" stop-color="#FFCB45"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#1C1B22" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="96" cy="214" rx="15" ry="7" fill="#F2BE34" stroke-width="4"/>
+    <ellipse cx="146" cy="214" rx="15" ry="7" fill="#F2BE34" stroke-width="4"/>
+    <g transform="rotate(-8 120 140)">
+      <path d="M62 160 C48 168 46 182 52 192" stroke-width="4.5"/>
+      <path d="M180 156 C196 150 204 138 202 124" stroke-width="4.5"/>
+      <!-- cuerpo gota con punta curiosa -->
+      <path d="M124 44 C134 76 184 104 184 158 C184 194 156 212 120 212 C84 212 56 194 56 158 C56 112 108 92 124 44 Z" fill="url(#miloFill)" stroke-width="5"/>
+      <!-- cejas: una alzada, pregunta -->
+      <path d="M92 110 C98 106 106 106 112 108" stroke-width="4.5"/>
+      <path d="M130 100 C138 94 148 94 154 100" stroke-width="4.5"/>
+      <!-- ojos grandes -->
+      <ellipse cx="103" cy="126" rx="8.5" ry="11" fill="#1C1B22" stroke="none"/>
+      <ellipse cx="142" cy="122" rx="10.5" ry="13" fill="#1C1B22" stroke="none"/>
+      <circle cx="106" cy="121" r="3" fill="#FFFFFF" stroke="none"/>
+      <circle cx="146" cy="116" r="3.5" fill="#FFFFFF" stroke="none"/>
+      <!-- boca "o" -->
+      <ellipse cx="124" cy="150" rx="5" ry="6" fill="#1C1B22" stroke-width="2"/>
+      <!-- correa -->
+      <path d="M78 140 C92 168 152 168 166 136" stroke-width="3"/>
+      <!-- binoculares -->
+      <rect x="104" y="160" width="40" height="14" rx="5" fill="#4F4A57" stroke-width="3.5"/>
+      <circle cx="110" cy="182" r="11" fill="#4F4A57" stroke-width="3.5"/>
+      <circle cx="138" cy="182" r="11" fill="#4F4A57" stroke-width="3.5"/>
+      <circle cx="107" cy="179" r="3" fill="#CDEBFF" stroke="none"/>
+      <circle cx="135" cy="179" r="3" fill="#CDEBFF" stroke="none"/>
+    </g>
+    <!-- chispas de curiosidad -->
+    <path d="M170 52 L176 40 M184 64 L196 58 M162 40 L160 28" stroke-width="3"/>
+  </g>
+</svg>

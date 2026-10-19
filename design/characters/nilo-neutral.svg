@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">Nilo, finanzas: forma de campana estable con libreta y lápiz tras la cabeza</title>
+  <defs>
+    <linearGradient id="niloFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C6CEFF"/>
+      <stop offset="1" stop-color="#8E9DF5"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#1C1B22" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="92" cy="214" rx="18" ry="7" fill="#7F90F2" stroke-width="4"/>
+    <ellipse cx="148" cy="214" rx="18" ry="7" fill="#7F90F2" stroke-width="4"/>
+    <!-- lápiz detrás de la cabeza -->
+    <g transform="rotate(32 160 70)">
+      <rect x="150" y="40" width="12" height="54" rx="2" fill="#FFD86B" stroke-width="3.5"/>
+      <path d="M150 40 L156 28 L162 40 Z" fill="#FFE4D1" stroke-width="3"/>
+    </g>
+    <!-- cuerpo campana -->
+    <path d="M120 58 C148 58 160 84 160 104 C160 126 198 140 198 176 C198 204 164 214 120 214 C76 214 42 204 42 176 C42 140 80 126 80 104 C80 84 92 58 120 58 Z" fill="url(#niloFill)" stroke-width="5"/>
+    <!-- ojos tranquilos con párpado -->
+    <ellipse cx="106" cy="106" rx="7" ry="8.5" fill="#1C1B22" stroke="none"/>
+    <ellipse cx="136" cy="106" rx="7" ry="8.5" fill="#1C1B22" stroke="none"/>
+    <path d="M97 102 C102 98 110 98 115 102" stroke="#A5B2FA" stroke-width="5"/>
+    <path d="M127 102 C132 98 140 98 145 102" stroke="#A5B2FA" stroke-width="5"/>
+    <path d="M96 100 C102 95 110 95 116 100" stroke-width="3.5"/>
+    <path d="M126 100 C132 95 140 95 146 100" stroke-width="3.5"/>
+    <ellipse cx="94" cy="124" rx="7" ry="4.5" fill="#FF8F7A" opacity=".4" stroke="none"/>
+    <ellipse cx="148" cy="124" rx="7" ry="4.5" fill="#FF8F7A" opacity=".4" stroke="none"/>
+    <path d="M112 128 C118 134 126 134 130 127" stroke-width="4"/>
+    <!-- libreta abrazada -->
+    <g transform="rotate(-10 84 172)">
+      <rect x="62" y="146" width="44" height="54" rx="5" fill="#FFFFFF" stroke-width="4"/>
+      <path d="M72 162 L96 162 M72 174 L96 174 M72 186 L88 186" stroke-width="3"/>
+      <path d="M62 152 L56 152 M62 166 L56 166 M62 180 L56 180" stroke-width="3"/>
+    </g>
+    <path d="M60 158 C80 150 100 160 108 176" stroke-width="4.5"/>
+    <path d="M186 168 C200 172 204 186 198 196" stroke-width="4.5"/>
+  </g>
+</svg>
