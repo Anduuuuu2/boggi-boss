@@ -32,28 +32,34 @@ Registro de progreso real. Fuente de verdad del estado técnico: GitHub Issues/P
 Actualizar esta sección al cerrar cada sesión o hito; un editor a la vez.
 
 ### Repositorio y entorno local
-- Remoto: https://github.com/Anduuuuu2/boggi-boss (privado). `main` = commit vacío
-  97cae40; todo el trabajo vive en ramas y PR.
+- Remoto: https://github.com/Anduuuuu2/boggi-boss (**público** desde 2026-10-20, por
+  decisión del fundador para proteger ramas sin pagar). `main` = commit vacío 97cae40;
+  todo el trabajo vive en ramas y PR. El repo privado original quedó archivado como
+  `Anduuuuu2/boggi-boss-archivo-privado` (no usar).
+- Repo público: nunca versionar secretos, datos personales ni material de terceros.
+  La referencia visual externa vive fuera de Git (`design/references/.gitignore`).
 - Clon de trabajo: `~/dev/boggi-boss`. Worktree BB-020: `~/dev/boggi-worktrees/BB-020`.
 - NO trabajar en `~/Desktop` ni `~/Documents`: están sincronizados con iCloud, que
   vacía archivos de `.git` (git falla con `mmap failed: Resource deadlock avoided`).
   Las copias antiguas `~/Desktop/App` y `~/Documents/boggi-worktrees` quedan obsoletas.
-- `main` sin protección: GitHub exige plan Pro para proteger ramas en repos privados.
-  Pendiente de decisión del fundador. Mientras tanto, la regla «nunca sobre main» es
-  obligatoria por convención.
+- `main` protegida: PR obligatorio, check de CI `verify` obligatorio, aplica también
+  a administradores, sin force push ni borrado. Aprobaciones requeridas = 0 porque
+  ambos agentes publican con la cuenta del fundador y GitHub no permite aprobar el PR
+  propio; la revisión cruzada se deja como comentario de revisión en el PR.
 
 ### PR abiertos
 | PR | Rama → base | Responsable | Revisor | Estado |
 |----|-------------|-------------|---------|--------|
-| #1 | feat/BB-010-codex-foundations → main | Codex | Claude | Revisado con cambios solicitados |
+| #1 | feat/BB-010-codex-foundations → main | Codex | Claude | CI PASS; revisado con cambios solicitados |
 | #2 | feat/BB-020-design-system → feat/BB-010-codex-foundations | Claude | Codex | Esperando revisión |
 | #3 | chore/BB-008-registro-progreso → feat/BB-010-codex-foundations | Claude | Codex | Este registro |
 
 ### Checklist del fundador (tablero de producto)
 Ninguna tarea está Completada: ninguna tiene PR mergeado.
-- BB-001 Repo privado: creado; falta protección de `main` (ver arriba).
-- BB-004, BB-010, BB-012, BB-013: candidatos en PR #1. La CI no se ha ejecutado
-  en GitHub (0 workflows registrados); bloqueante para el merge.
+- BB-001 Repo y reglas de ramas: repo creado (público) y `main` protegida. Listo para
+  marcar por el fundador.
+- BB-004, BB-010, BB-012, BB-013: candidatos en PR #1. CI `verify` PASS en GitHub
+  (la CI no corría en el repo privado; en el público sí).
 - BB-020, BB-021, BB-022 (concepto): candidatos en PR #2.
 - BB-040: propuesta de Claude en `docs/proposals/BB-040-ui-contract-review.md` (PR #2).
 
@@ -72,10 +78,10 @@ Ninguna tarea está Completada: ninguna tiene PR mergeado.
   Requiere actualizar contratos (BB-040) y design system (BB-022).
 
 ### Pendientes y bloqueos
-1. Fundador: decidir protección de `main` (recomendado GitHub Pro).
+1. Fundador: marcar BB-001 en la checklist.
 2. Fundador: confirmar que los IDs de la checklist (BB-001…BB-116, F0–F10) son los
    oficiales. Recomendación de Claude: sí; ROADMAP.md debe alinearse.
-3. Codex: corregir PR #1 (CI ejecutándose, ROADMAP alineado, versionar prompt maestro).
+3. Codex: corregir PR #1 (ROADMAP alineado a la checklist, versionar prompt maestro).
 4. Codex: revisar PR #2 y PR #3; incorporar `AgentRole` y `display_name` en contratos.
 5. Claude: tras merge de BB-010, rebasar BB-020 y empezar `packages/ui` (BB-023).
 6. Sin decidir: Supabase DEV, proveedor LLM, worker (ADR-001), cuentas OAuth y push.
