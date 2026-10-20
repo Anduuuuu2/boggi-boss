@@ -9,11 +9,12 @@
     "npm": ">=11 <12"
   },
   "workspaces": [
+    "apps/*",
     "packages/*",
     "services/*"
   ],
   "scripts": {
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && npm run typecheck --workspace @boggi/mobile",
     "lint": "eslint . --max-warnings 0",
     "build": "tsc",
     "test": "npm run build && node --test dist/packages/agents/test/*.test.js",
@@ -22,7 +23,11 @@
   "devDependencies": {
     "@types/node": "24.13.0",
     "eslint": "10.13.0",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "typescript-eslint": "8.72.0"
+  },
+  "overrides": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   }
 }

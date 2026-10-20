@@ -1,7 +1,7 @@
 # Mapa de navegación — Expo Router (propuesta BB-024)
 
-Estado: Propuesta. Se implementa en `apps/mobile/app/` cuando el scaffold móvil esté
-integrado. Nombres de ruta en inglés; textos visibles en español (i18n preparado).
+Estado: Propuesta. Se implementa en `apps/mobile/src/app/` (convención de Expo SDK 58;
+el árbol de abajo es relativo a esa carpeta). Nombres de ruta en inglés; textos visibles en español (i18n preparado).
 
 ```
 app/

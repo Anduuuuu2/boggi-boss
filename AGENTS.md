@@ -68,12 +68,12 @@ Actualizar esta sección al cerrar cada sesión o hito; un editor a la vez.
 | #1 | feat/BB-010-codex-foundations | BB-010 | Fusionado 2026-10-20 (squash 3da2bda) |
 | #2 | feat/BB-020-design-system | BB-020/021/022 | Fusionado 2026-10-20 (squash 51d4b6a) |
 | #3 | chore/BB-008-registro-progreso | BB-004/BB-008 | Fusionado 2026-10-20 (squash 213f9a5) |
+| #5 | chore/BB-006-owners-plantillas | BB-006/BB-007 | Fusionado 2026-10-20 (squash 7d5c327) |
 
 ### Checklist del fundador (tablero de producto)
 - Listos para marcar: BB-001 (repo público, `main` protegida), BB-010 (PR #1),
-  BB-004 (PR #3), BB-006 y BB-007 (issue #4 y su PR).
-- Parciales, NO marcar: BB-012 y BB-013 (scripts y CI existen solo para paquetes
-  backend; falta app móvil). BB-040 (propuesta en PR #2, contratos aún sin aceptar).
+  BB-004 (PR #3), BB-006 y BB-007 (PR #5), BB-011 (app Expo SDK 58, PR de BB-011).
+- Parciales, NO marcar: BB-012 y BB-013 (falta lint React, format y tests de la app). BB-040 (propuesta en PR #2, contratos aún sin aceptar).
 - BB-020 (tokens, tipografía, accesibilidad), BB-021 (Boggi) y BB-022 (empleados por
   rol, nombres por defecto): listos para marcar tras PR #2. Su uso en código llega con
   BB-023 y la integración SVG en la app.
