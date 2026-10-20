@@ -85,3 +85,51 @@ Ninguna tarea está Completada: ninguna tiene PR mergeado.
 4. Codex: revisar PR #2 y PR #3; incorporar `AgentRole` y `display_name` en contratos.
 5. Claude: tras merge de BB-010, rebasar BB-020 y empezar `packages/ui` (BB-023).
 6. Sin decidir: Supabase DEV, proveedor LLM, worker (ADR-001), cuentas OAuth y push.
+
+## Contexto para nuevas sesiones (Claude Code / Codex)
+
+Resumen del prompt maestro v1.1 del fundador (el original aún no está versionado).
+
+### Producto
+- **Boggi Boss**: asistente personal de IA mobile-first para Latinoamérica.
+  Lema: «Tu vida tiene un equipo». Español latinoamericano, preparado para i18n.
+  iOS y Android.
+- Boggi es el jefe y punto único de contacto; delega en empleados especializados:
+  agenda/recordatorios (nombre por defecto Timo), investigación (Milo) y finanzas
+  personales (Nilo). Los nombres son personalizables por el usuario.
+- UX: «Pídele → Boggi delega → Tu equipo resuelve». Acciones reales con estado
+  verificable, no una colección de chats.
+- Principios: no fingir trabajo completado; privacidad y consentimiento; ninguna
+  acción sensible sin confirmación explícita; tareas programadas avanzan en backend
+  con la app cerrada; herramientas tipadas, idempotentes y auditables; identidad 2D
+  vectorial original (trazo negro gestual, pastel suave); sin secretos en cliente/Git.
+- MVP: onboarding y login; Home con chat texto/voz; empleados y actividad; Timo
+  (recordatorios + Google Calendar); Milo (búsqueda con fuentes); Nilo (gastos,
+  ingresos, presupuestos, facturas, sin bancos); notificaciones; compartir a Boggi;
+  WhatsApp solo prepara texto y el usuario envía. App Intents/Live Activities después.
+
+### Stack propuesto (confirmar compatibilidad)
+Expo + React Native + TypeScript + Expo Router, Reanimated, TanStack Query, Zustand,
+React Hook Form + Zod. Supabase (Auth, Postgres con RLS, Storage, Edge Functions).
+Worker/cola durable según ADR. LLM con interfaz agnóstica. Expo Notifications.
+
+### Gobierno
+- Checklist de producto (vista del fundador, se actualiza a mano desde PR mergeados):
+  https://docs.google.com/document/d/1qo5VAZsT2-A6x3FElusnu0cmtW3v0tnpH8-8ljlLyug
+  Fases F0–F10, tareas BB-001…BB-116, prioridades P0/P1/P2.
+- Responsables: Claude Code = frontend/UX y design system; Codex = backend, agentes,
+  infraestructura y contratos; Fundador = alcance, cuentas y decisiones.
+- Ramas `feat/BB-xxx-resumen`, un issue = un responsable = un PR, el otro agente revisa.
+  Cada tarea deja `docs/handoffs/BB-xxx-*.md`. Decisiones de arquitectura en ADR.
+- Done = PR mergeado con CI en verde, revisión cruzada y checklist sincronizada.
+
+### Notas operativas aprendidas
+- Ruta del proyecto: `/Users/andrewarchbold/dev/boggi-boss`. Worktree BB-020:
+  `/Users/andrewarchbold/dev/boggi-worktrees/BB-020`.
+- Todos los agentes usan la cuenta GitHub `Anduuuuu2`; las revisiones se publican como
+  comentario (`gh pr review --comment`), no como aprobación.
+- Imagen de referencia de terceros: `/Users/andrewarchbold/dev/boggi-private/references/`
+  (fuera del repo). Copiarla a `design/references/` solo localmente.
+- `~/Desktop/App/src/` contiene un esqueleto Expo no versionado de origen incierto;
+  no se ha incorporado. Decidir con el fundador antes de borrarlo.
+- No inventar claves, cuentas OAuth, URLs ni credenciales: pedirlas al fundador.
