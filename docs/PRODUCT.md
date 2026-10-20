@@ -1,8 +1,8 @@
 # Producto — base propuesta
 
 Fuente inicial: prompt compartido v1.1 y prompt de inicio Codex suministrados
-en la conversación del 19 de octubre de 2026. Este resumen no reemplaza el original;
-prompts/00_PROMPT_MAESTRO_COMPARTIDO.md todavía no existe en Git.
+en la conversación del 19 de octubre de 2026. Este resumen no reemplaza el original,
+versionado en prompts/00_PROMPT_MAESTRO_COMPARTIDO.md.
 
 Boggi es el punto único de contacto de un asistente móvil para Latinoamérica.
 Timo gestiona agenda, recordatorios y seguimiento; Milo investiga con fuentes;
