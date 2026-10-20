@@ -14,7 +14,9 @@ tokens y coste. Sus valores y proveedor se acordarán antes de activar LLM.
 - packages/agents: dominio y política. Hoy solo prepara un recordatorio validado.
 - packages/database y supabase: futuros adaptadores, migraciones, RLS y pruebas.
 - services: futuro worker y orquestación. No hay proceso persistente todavía.
-- apps/mobile y packages/ui: propiedad de Claude, no creados en este bootstrap.
+- apps/mobile: Expo SDK 58 + Expo Router (BB-011). Consume packages/shared como TS
+  fuente vía `exports`; Metro resuelve los imports `.js` de NodeNext a `.ts`.
+- packages/ui: componentes y tokens (BB-023), sin acceso a datos ni secretos.
 
 Edge Functions: validar sesión y entrada, autorización y operaciones breves.
 Responder 202 solo tras confirmar escritura durable; jamás usar una promesa

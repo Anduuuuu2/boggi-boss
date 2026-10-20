@@ -15,9 +15,11 @@ export const createReminderSchema = z.strictObject({
 });
 
 export type CreateReminderInput = z.infer<typeof createReminderSchema>;
-export type TaskStatus =
-  | 'pending' | 'awaiting_approval' | 'scheduled' | 'running'
-  | 'completed' | 'failed' | 'cancelled';
+export const TASK_STATUSES = [
+  'pending', 'awaiting_approval', 'scheduled', 'running',
+  'completed', 'failed', 'cancelled',
+] as const;
+export type TaskStatus = (typeof TASK_STATUSES)[number];
 
 export interface ReminderPlan extends CreateReminderInput {
   user_id: string;

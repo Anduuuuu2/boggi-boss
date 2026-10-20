@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Boggi Boss",
+    "slug": "boggi-boss",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "scheme": "boggiboss",
+    "userInterfaceStyle": "light",
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
