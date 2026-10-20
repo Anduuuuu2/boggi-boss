@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
-  <title id="t">Timo, agenda y recordatorios: cápsula alta con mechón de manecillas de reloj</title>
+  <title id="t">Empleado de agenda y recordatorios (nombre por defecto Timo): cápsula alta con mechón de manecillas de reloj</title>
   <defs>
-    <linearGradient id="timoFill" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="agendaFill" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#B5EBD5"/>
       <stop offset="1" stop-color="#76D2AE"/>
     </linearGradient>
@@ -13,7 +13,7 @@
     <path d="M78 150 C64 156 60 170 64 182" stroke-width="4.5"/>
     <path d="M166 146 C182 140 190 126 188 110" stroke-width="4.5"/>
     <!-- cuerpo cápsula alta -->
-    <rect x="76" y="62" width="92" height="150" rx="46" fill="url(#timoFill)" stroke-width="5"/>
+    <rect x="76" y="62" width="92" height="150" rx="46" fill="url(#agendaFill)" stroke-width="5"/>
     <!-- mechón: manecillas -->
     <path d="M122 62 L120 26" stroke-width="5"/>
     <path d="M122 62 L142 44" stroke-width="5"/>

@@ -1,10 +1,8 @@
 # BB-020 — Claude mobile/design (Fase A: diseño)
 
 Fecha: 2026-10-19. Estado: **Fase A candidata, NO Done.**
-Rama: `feat/BB-020-design-system`, creada sobre `feat/BB-010-codex-foundations` (3acc55c)
-porque `docs/DESIGN_SYSTEM.md` nace en el bootstrap; el PR depende de BB-010.
-Worktree: `/Users/andrewarchbold/Documents/boggi-worktrees/BB-020`.
-Issue/PR: no creados (repo sin remoto; `gh` sin sesión válida).
+Rama: `feat/BB-020-design-system`, rebasada sobre `main` el 2026-10-20 tras el merge
+de BB-010 (#1) y BB-008 (#3). Worktree: `~/dev/boggi-worktrees/BB-020`. PR: #2.
 
 ## Qué cambió
 
@@ -28,20 +26,27 @@ No hay código de app: `apps/mobile` y `packages/ui` no existen hasta integrar e
 - Render de SVG y preview con Chrome headless; captura revisada visualmente.
 - No aplica typecheck/lint/tests: no se añadió TypeScript.
 
-## Dudas abiertas
+## Actualización 2026-10-20 — nombres personalizables
 
-1. **Nombre «Milo»** coincide con un personaje de la referencia externa con el mismo
-   rol (investigación). Recomiendo valorar otro nombre o validarlo con el fundador.
-2. Numeración: el `ROADMAP.md` de Codex usa BB-012 para diseño y BB-020 para beta; la
-   checklist del fundador usa BB-020…028 para diseño. Seguir la checklist (aprobado por
-   el fundador); Codex debe ajustar ROADMAP en su PR.
-3. Contratos: 6 cambios solicitados en la propuesta BB-040.
+Decisión del fundador aplicada: personajes, tokens, assets y rutas por rol estable
+(`boggi`, `agenda`, `research`, `finance`); Timo, Milo y Nilo son nombres por defecto.
+- SVG renombrados: `agenda-neutral.svg`, `research-neutral.svg`, `finance-neutral.svg`
+  (títulos accesibles e IDs de degradado por rol). Previews actualizadas.
+- `tokens.json`: `color.agent.{boggi,agenda,research,finance}`.
+- DESIGN_SYSTEM §5: reglas de nombre visible, validación y flujo de renombrar en
+  onboarding (`team.tsx`) y Ajustes/detalle (`team/[role].tsx`).
+- BB-040: `AgentRole`, `display_name`, `PATCH /agents/:role` y herramientas por rol.
+
+## Dudas resueltas
+
+1. «Milo» frente a la referencia externa: resuelto por la decisión de nombres
+   personalizables (solo es un nombre por defecto; el rol y el diseño son propios).
+2. Numeración: ROADMAP alineado con la checklist en #1.
+3. Contratos: los cambios siguen como propuesta hasta el PR de BB-040.
 
 ## Dependencias y siguientes tareas
 
-- Bloqueante: BB-001 (repo GitHub) y merge de BB-010.
-- BB-011 (Codex) debe añadir `apps/mobile` con Expo Router + TS strict, o acordar que
-  Claude lo cree en un issue propio tras el merge de BB-010.
+- BB-011: `apps/mobile` con Expo Router + TS strict (Claude, responsable único temporal).
 - Fase B1: `packages/ui` (tokens.ts + componentes + tests RNTL).
 - Fase B2: rutas, `DataAdapterProvider`, `MockAdapter`.
 - Fase B3: Home/Chat, voz visual, pruebas en iPhone SE y 17 Pro Max.

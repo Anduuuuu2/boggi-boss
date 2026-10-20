@@ -11,5 +11,6 @@ impide subirla.
 Prohibido: calcar, vectorizar o adaptar sus personajes, composiciones, nombres,
 accesorios (lupa, bombilla, portapapeles, etiqueta de código, corazón) o pantallas.
 
-Nota: la referencia incluye un personaje llamado «Milo» con rol de investigación,
-igual que nuestro empleado. Ver pregunta abierta en `docs/handoffs/BB-020-claude-mobile.md`.
+Nota: la referencia incluye un personaje llamado «Milo» con rol de investigación.
+En Boggi Boss «Milo» es solo el nombre por defecto, personalizable por el usuario
+(decisión del fundador 2026-10-20); personaje y rol son diseño propio.
