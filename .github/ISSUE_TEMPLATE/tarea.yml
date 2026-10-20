@@ -1,0 +1,65 @@
+name: Tarea de la checklist
+description: Una tarea BB-xxx con un único responsable, un PR y un handoff.
+title: "BB-xxx: "
+body:
+  - type: input
+    id: checklist_id
+    attributes:
+      label: ID de la checklist
+      description: ID oficial (BB-001…BB-116) y fase (F0–F10).
+      placeholder: BB-023 · F2
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad
+      options: [P0, P1, P2]
+    validations:
+      required: true
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Responsable (un único editor)
+      description: Ver la matriz de owners en AGENTS.md.
+      options: [Claude Code, Codex, Fundador]
+    validations:
+      required: true
+  - type: input
+    id: reviewer
+    attributes:
+      label: Revisión
+      description: Revisor cruzado, o «autorrevisión» mientras rija la decisión del fundador del 2026-10-20.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterio de aceptación
+      description: Copiado de la checklist, más lo que deba demostrarse con pruebas reales.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Archivos y áreas afectadas
+      description: Marca si toca archivos compartidos (raíz, packages/shared, contratos, CI, AGENTS.md).
+  - type: textarea
+    id: tests
+    attributes:
+      label: Pruebas previstas
+      description: Comandos o verificaciones que demostrarán el criterio. Nada de resultados inventados.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias y bloqueos
+      description: Tareas previas, cuentas o credenciales que debe aportar el fundador (nunca pegarlas aquí).
+  - type: input
+    id: handoff
+    attributes:
+      label: Handoff
+      placeholder: docs/handoffs/BB-xxx-resumen.md
+    validations:
+      required: true

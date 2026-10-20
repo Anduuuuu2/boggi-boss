@@ -6,13 +6,11 @@
   (prompt maestro v1.1 versionado). Claude lee además CLAUDE.md.
 - El código y documentos versionados son la fuente de verdad. Registrar conflictos
   entre código y documentación y pedir acuerdo antes de resolverlos.
-- Codex: supabase/**, services/**, packages/agents/**, packages/database/**,
-  arquitectura, base de datos y pruebas backend.
-- Claude: apps/mobile/**, packages/ui/**, personajes y design system.
-- Compartidos: packages/shared/**, contratos, raíz, CI y este archivo.
-  Un editor por issue; Codex es dueño del bootstrap BB-010. Después, coordinar.
+- Ownership: ver «Matriz de owners» abajo. Un editor por issue en archivos compartidos.
 - Trabajar en rama por issue y worktree independiente, nunca sobre main.
   No asumir que Orca crea worktrees automáticamente.
+- Issues con `.github/ISSUE_TEMPLATE/tarea.yml`, PR con `.github/pull_request_template.md`
+  y handoff a partir de `docs/handoffs/TEMPLATE.md`.
 - Contratos y esquema requieren revisión de Claude antes de integrar el cliente.
 - No inventar resultados, credenciales, proveedores, versiones verificadas o PR.
 - No poner secretos en cliente, Git, prompts o logs. No registrar contenido personal.
@@ -25,6 +23,23 @@
 - Done requiere pruebas pertinentes, aislamiento RLS cuando aplique, revisión
   cruzada, PR aprobado/mergeado y checklist sincronizada. Un test de dominio
   no demuestra push ni ejecución en segundo plano.
+
+## Matriz de owners (BB-006)
+
+| Área / rutas | Owner de área | Ejecuta hoy | Revisión |
+|---|---|---|---|
+| `apps/mobile/**`, `packages/ui/**`, `design/**`, `docs/DESIGN_SYSTEM.md` | Claude | Claude | Codex¹ |
+| `supabase/**`, `services/**`, `packages/agents/**`, `packages/database/**` | Codex | Claude | Claude¹ |
+| `docs/ARCHITECTURE.md`, `docs/DATABASE.md`, `docs/decisions/**` (ADR) | Codex | Claude | Fundador aprueba ADR |
+| `packages/shared/**`, `docs/API_CONTRACTS.md` (contratos) | Compartido | Claude | Ambos¹ |
+| Raíz (`package.json`, lockfile, tsconfig, eslint, `.github/**`, CI) | Compartido | Claude | Ambos¹ |
+| `AGENTS.md`, `CLAUDE.md`, `docs/ROADMAP.md`, `docs/PROGRESS.md`, `prompts/**` | Compartido | Claude | Fundador |
+| `docs/PRODUCT.md`, alcance, cuentas, credenciales, pagos | Fundador | Fundador | — |
+
+¹ Mientras rija la decisión del fundador del 2026-10-20 la revisión es autorrevisión
+documentada en el PR + CI `verify`. Reglas de archivos compartidos: un solo PR abierto
+a la vez que los modifique; si dos tareas los necesitan, la segunda se rebasa tras el
+merge de la primera. Cuentas y credenciales nunca las crea un agente.
 
 ## Estado del proyecto (actualizado 2026-10-20 por Claude Code)
 
@@ -51,12 +66,12 @@ Actualizar esta sección al cerrar cada sesión o hito; un editor a la vez.
 | PR | Rama | Tareas | Estado |
 |----|------|--------|--------|
 | #1 | feat/BB-010-codex-foundations | BB-010 | Fusionado 2026-10-20 (squash 3da2bda) |
-| #2 | feat/BB-020-design-system | BB-020/021/022 | Fusionado 2026-10-20 (squash) |
+| #2 | feat/BB-020-design-system | BB-020/021/022 | Fusionado 2026-10-20 (squash 51d4b6a) |
 | #3 | chore/BB-008-registro-progreso | BB-004/BB-008 | Fusionado 2026-10-20 (squash 213f9a5) |
 
 ### Checklist del fundador (tablero de producto)
 - Listos para marcar: BB-001 (repo público, `main` protegida), BB-010 (PR #1),
-  BB-004 (AGENTS.md, CLAUDE.md y prompt maestro, al fusionarse PR #3).
+  BB-004 (PR #3), BB-006 y BB-007 (issue #4 y su PR).
 - Parciales, NO marcar: BB-012 y BB-013 (scripts y CI existen solo para paquetes
   backend; falta app móvil). BB-040 (propuesta en PR #2, contratos aún sin aceptar).
 - BB-020 (tokens, tipografía, accesibilidad), BB-021 (Boggi) y BB-022 (empleados por
@@ -84,7 +99,7 @@ Actualizar esta sección al cerrar cada sesión o hito; un editor a la vez.
   Requiere actualizar contratos (BB-040) y design system (BB-022).
 
 ### Pendientes y bloqueos
-1. Fundador: marcar BB-001, BB-004 y BB-010 en la checklist.
+1. Fundador: marcar en la checklist los IDs «Listos para marcar».
 2. IDs oficiales = checklist (BB-001…BB-116, F0–F10); ROADMAP.md alineado en PR #1.
 3. BB-040: propuesta actualizada con `AgentRole` y `display_name`; falta el PR que
    acepte `docs/API_CONTRACTS.md` y los esquemas en `packages/shared`.
