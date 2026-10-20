@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">Empleado de agenda y recordatorios (nombre por defecto Timo): cápsula alta con mechón de manecillas de reloj</title>
+  <defs>
+    <linearGradient id="agendaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B5EBD5"/>
+      <stop offset="1" stop-color="#76D2AE"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#1C1B22" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="104" cy="214" rx="14" ry="7" fill="#5CC49E" stroke-width="4"/>
+    <ellipse cx="140" cy="214" rx="14" ry="7" fill="#5CC49E" stroke-width="4"/>
+    <!-- brazo con reloj de pulsera -->
+    <path d="M78 150 C64 156 60 170 64 182" stroke-width="4.5"/>
+    <path d="M166 146 C182 140 190 126 188 110" stroke-width="4.5"/>
+    <!-- cuerpo cápsula alta -->
+    <rect x="76" y="62" width="92" height="150" rx="46" fill="url(#agendaFill)" stroke-width="5"/>
+    <!-- mechón: manecillas -->
+    <path d="M122 62 L120 26" stroke-width="5"/>
+    <path d="M122 62 L142 44" stroke-width="5"/>
+    <circle cx="122" cy="62" r="5" fill="#1C1B22" stroke="none"/>
+    <!-- reloj -->
+    <circle cx="184" cy="126" r="9" fill="#FFFFFF" stroke-width="3.5"/>
+    <path d="M184 120 L184 126 L188 128" stroke-width="2.5"/>
+    <!-- cejas rectas, decididas -->
+    <path d="M98 98 L114 96" stroke-width="4.5"/>
+    <path d="M130 96 L146 98" stroke-width="4.5"/>
+    <!-- ojos -->
+    <ellipse cx="107" cy="114" rx="7" ry="9.5" fill="#1C1B22" stroke="none"/>
+    <ellipse cx="138" cy="114" rx="7" ry="9.5" fill="#1C1B22" stroke="none"/>
+    <circle cx="109" cy="110" r="2.5" fill="#FFFFFF" stroke="none"/>
+    <circle cx="140" cy="110" r="2.5" fill="#FFFFFF" stroke="none"/>
+    <ellipse cx="94" cy="134" rx="8" ry="5" fill="#FF8F7A" opacity=".4" stroke="none"/>
+    <ellipse cx="152" cy="134" rx="8" ry="5" fill="#FF8F7A" opacity=".4" stroke="none"/>
+    <!-- boca pequeña -->
+    <path d="M114 138 C119 144 127 144 131 137" stroke-width="4"/>
+    <!-- marca de tic-tac -->
+    <path d="M150 34 L158 28 M154 46 L164 46" stroke-width="3"/>
+  </g>
+</svg>

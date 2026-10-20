@@ -51,15 +51,17 @@ Actualizar esta sección al cerrar cada sesión o hito; un editor a la vez.
 | PR | Rama | Tareas | Estado |
 |----|------|--------|--------|
 | #1 | feat/BB-010-codex-foundations | BB-010 | Fusionado 2026-10-20 (squash 3da2bda) |
-| #2 | feat/BB-020-design-system | BB-020/021/022 | Abierto, base `main` |
-| #3 | chore/BB-008-registro-progreso | BB-004/BB-008 | Este registro |
+| #2 | feat/BB-020-design-system | BB-020/021/022 | Fusionado 2026-10-20 (squash) |
+| #3 | chore/BB-008-registro-progreso | BB-004/BB-008 | Fusionado 2026-10-20 (squash 213f9a5) |
 
 ### Checklist del fundador (tablero de producto)
 - Listos para marcar: BB-001 (repo público, `main` protegida), BB-010 (PR #1),
   BB-004 (AGENTS.md, CLAUDE.md y prompt maestro, al fusionarse PR #3).
 - Parciales, NO marcar: BB-012 y BB-013 (scripts y CI existen solo para paquetes
   backend; falta app móvil). BB-040 (propuesta en PR #2, contratos aún sin aceptar).
-- BB-020, BB-021, BB-022 (concepto): candidatos en PR #2.
+- BB-020 (tokens, tipografía, accesibilidad), BB-021 (Boggi) y BB-022 (empleados por
+  rol, nombres por defecto): listos para marcar tras PR #2. Su uso en código llega con
+  BB-023 y la integración SVG en la app.
 
 ### Validación verificada
 - PR #1 (Node 24.13.0, npm 11.6.2): `npm ci --ignore-scripts` y `npm run check` PASS,
@@ -84,8 +86,8 @@ Actualizar esta sección al cerrar cada sesión o hito; un editor a la vez.
 ### Pendientes y bloqueos
 1. Fundador: marcar BB-001, BB-004 y BB-010 en la checklist.
 2. IDs oficiales = checklist (BB-001…BB-116, F0–F10); ROADMAP.md alineado en PR #1.
-3. Claude: rebasar PR #2 a `main` con nombres personalizables e incorporar `AgentRole`
-   y `display_name` en la propuesta BB-040.
+3. BB-040: propuesta actualizada con `AgentRole` y `display_name`; falta el PR que
+   acepte `docs/API_CONTRACTS.md` y los esquemas en `packages/shared`.
 4. Sin decidir: Supabase DEV, proveedor LLM, worker (ADR-001), cuentas OAuth y push.
 
 ## Contexto para nuevas sesiones (Claude Code / Codex)
@@ -127,8 +129,8 @@ Worker/cola durable según ADR. LLM con interfaz agnóstica. Expo Notifications.
   ver Decisiones del fundador) y checklist sincronizada.
 
 ### Notas operativas aprendidas
-- Ruta del proyecto: `/Users/andrewarchbold/dev/boggi-boss`. Worktree BB-020:
-  `/Users/andrewarchbold/dev/boggi-worktrees/BB-020`.
+- Ruta del proyecto: `/Users/andrewarchbold/dev/boggi-boss`. Worktrees por tarea en
+  `/Users/andrewarchbold/dev/boggi-worktrees/BB-xxx`.
 - Todos los agentes usan la cuenta GitHub `Anduuuuu2`; las revisiones se publican como
   comentario (`gh pr review --comment`), no como aprobación.
 - Imagen de referencia de terceros: `/Users/andrewarchbold/dev/boggi-private/references/`
